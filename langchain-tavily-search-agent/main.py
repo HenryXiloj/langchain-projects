@@ -62,7 +62,7 @@ def search(query: str) -> str:
 # This is the "brain" of our agent that will process queries and decide actions
 llm = ChatOpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),      # API key from environment variables
-    base_url=os.getenv("OPENAI_BASE_URL"),    # Optional: custom API endpoint
+    #base_url=os.getenv("OPENAI_BASE_URL"),    # Optional: custom API endpoint
     model=os.getenv("OPENAI_MODEL"),          # Model name (e.g., "gpt-4", "gpt-3.5-turbo")
     temperature=0.2,                          # Lower temperature = more focused/deterministic responses
 )
