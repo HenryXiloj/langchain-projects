@@ -93,7 +93,6 @@ langchain-tavily-search-agent/
 ├── pyproject.toml       # Project dependencies and metadata
 ├── README.md            # This file
 ├── .env                 # Environment variables (create this)
-├── .gitignore          # Git ignore rules
 └── uv.lock             # Dependency lock file
 ```
 
@@ -190,14 +189,6 @@ Based on the latest information from December 2025, here are the key AI developm
 1. **API Key Errors**: Ensure your `.env` file is properly configured with valid API keys
 2. **Module Not Found**: Run `uv sync` or `pip install -r requirements.txt` to install dependencies
 3. **Rate Limits**: Both OpenAI and Tavily have rate limits; consider implementing retry logic for production use
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests.
 
 ## Acknowledgments
 
