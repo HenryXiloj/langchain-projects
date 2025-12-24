@@ -73,7 +73,6 @@ tools = [search]
 #tools = [TavilyClient()]
 
 # Create the agent using create_agent function
-# IMPORTANT: Use 'model' parameter (not 'llm') - this is the correct parameter name
 # The agent will use the LLM to reason about which tools to use and how to respond
 agent = create_agent(model=llm, tools=tools)
 
