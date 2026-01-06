@@ -4,12 +4,13 @@ A growing set of LangChain experiments and agents. Each folder is a complete, ru
 
 ## Projects
 
-- [langchain-tavily-search-agent](langchain-tavily-search-agent/README.md) — Web search agent using Tavily + LangChain.
+- [langchain-rag-demo](langchain-rag-demo/README.md) - RAG demo using OpenAI + Pinecone.
+- [langchain-tavily-search-agent](langchain-tavily-search-agent/README.md) - Web search agent using Tavily + LangChain.
 
 ## Quick Start
 
 1. Open a project folder.
-2. Follow that project’s `README.md`.
+2. Follow that project's `README.md`.
 
 ## Notes
 
