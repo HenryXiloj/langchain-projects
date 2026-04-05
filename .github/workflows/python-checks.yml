@@ -1,0 +1,51 @@
+name: Python Checks
+
+on:
+  push:
+    paths:
+      - "langchain-rag-demo/**"
+      - "langchain-rag-pgvector/**"
+      - "langchain-tavily-search-agent/**"
+      - ".github/workflows/python-checks.yml"
+  pull_request:
+    paths:
+      - "langchain-rag-demo/**"
+      - "langchain-rag-pgvector/**"
+      - "langchain-tavily-search-agent/**"
+      - ".github/workflows/python-checks.yml"
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - langchain-rag-demo
+          - langchain-rag-pgvector
+          - langchain-tavily-search-agent
+
+    defaults:
+      run:
+        working-directory: ${{ matrix.project }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Check formatting with black
+        run: uv run black --check .
+
+      - name: Check imports with isort
+        run: uv run isort --check-only .
