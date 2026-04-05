@@ -5,7 +5,7 @@ A small collection of 3 LangChain projects. Each folder is a complete, runnable 
 ## Projects
 
 - [langchain-rag-demo](langchain-rag-demo/README.md) - RAG demo using OpenAI + Pinecone.
-- [langchain-rag-pgvector](langchain-rag-pgvector/README.md) - RAG demo using OpenAI + PostgreSQL + pgvector.
+- [langchain-rag-pgvector](langchain-rag-pgvector/README.md) - RAG demo using Ollama or OpenAI + PostgreSQL + pgvector.
 - [langchain-tavily-search-agent](langchain-tavily-search-agent/README.md) - Web search agent using Tavily + LangChain.
 
 ## Quick Start
