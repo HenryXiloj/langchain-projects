@@ -1,0 +1,1 @@
+pgvector is used for semantic search and RAG systems with PostgreSQL.

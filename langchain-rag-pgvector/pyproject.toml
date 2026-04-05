@@ -1,0 +1,21 @@
+[project]
+name = "langchain-rag-pgvector"
+version = "0.1.0"
+description = "RAG demo using LangChain, PostgreSQL pgvector, OpenAI or Ollama"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.2.0",
+    "langchain-community>=0.4.1",
+    "langchain-ollama>=0.3.2",
+    "langchain-openai>=1.1.6",
+    "langchain-postgres>=0.0.15",
+    "langchain-text-splitters>=0.3.11",
+    "psycopg[binary]>=3.2.9",
+    "python-dotenv>=1.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "black",
+    "isort",
+]
