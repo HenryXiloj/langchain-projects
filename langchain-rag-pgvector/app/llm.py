@@ -1,7 +1,10 @@
+import os
+
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
+
 from .config import require_env, require_provider
-import os
+
 
 def build_llm():
     provider = require_provider("LLM_PROVIDER", "openai")

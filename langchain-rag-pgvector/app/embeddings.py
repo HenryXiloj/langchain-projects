@@ -1,7 +1,10 @@
+import os
+
 from langchain_ollama import OllamaEmbeddings
 from langchain_openai import OpenAIEmbeddings
+
 from .config import require_env, require_provider
-import os
+
 
 def build_embeddings():
     provider = require_provider("EMBEDDING_PROVIDER", "openai")

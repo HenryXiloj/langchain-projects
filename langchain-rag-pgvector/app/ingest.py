@@ -1,5 +1,5 @@
-from pathlib import Path
 import sys
+from pathlib import Path
 
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -14,6 +14,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 FILE_PATH = BASE_DIR / "example_pgvector.txt"
+
 
 def main():
     loader = TextLoader(FILE_PATH, encoding="utf8")
@@ -32,6 +33,7 @@ def main():
     vectorstore.add_documents(texts, ids=ids)
 
     print("Ingest complete")
+
 
 if __name__ == "__main__":
     main()

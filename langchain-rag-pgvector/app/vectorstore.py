@@ -1,6 +1,9 @@
-from langchain_postgres import PGVector
-from .config import require_env, env_flag
 import os
+
+from langchain_postgres import PGVector
+
+from .config import env_flag, require_env
+
 
 def build_vectorstore(embeddings):
     return PGVector(
