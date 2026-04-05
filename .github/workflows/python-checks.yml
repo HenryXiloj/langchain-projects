@@ -45,7 +45,7 @@ jobs:
         run: uv sync
 
       - name: Check formatting with black
-        run: uv run black --check .
+        run: uv run python -m black --check .
 
       - name: Check imports with isort
-        run: uv run isort --check-only .
+        run: uv run python -m isort --check-only .

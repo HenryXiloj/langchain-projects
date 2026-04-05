@@ -1,23 +1,24 @@
 import os
-from dotenv import load_dotenv
 from pathlib import Path
 
+from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
-from langchain_text_splitters import CharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
+from langchain_text_splitters import CharacterTextSplitter
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 file_path = BASE_DIR / "example_pinecone.txt"
+
 
 def main():
     print("Hello from langchain-rag-demo!")
 
     # 1. Load document
     loader = TextLoader(
-    file_path,
-    encoding="utf8",
+        file_path,
+        encoding="utf8",
     )
     documents = loader.load()
 
@@ -43,6 +44,7 @@ def main():
     )
 
     print("Vector store created successfully.")
+
 
 if __name__ == "__main__":
     main()
