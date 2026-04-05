@@ -29,8 +29,9 @@ def main():
     context = format_docs(docs)
 
     prompt = ChatPromptTemplate.from_template("""
-Answer using ONLY the context.
-If unknown, say: I don't know.
+Answer using ONLY the provided context.
+If the answer is not explicitly contained in the context, reply with exactly:
+I don't know.
 
 Context:
 {context}
