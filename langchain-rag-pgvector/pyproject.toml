@@ -19,3 +19,6 @@ dev = [
     "black",
     "isort",
 ]
+
+[tool.isort]
+profile = "black"
