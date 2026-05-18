@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Website Security Checker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Security triage</p>
+          <h1>AI Website Security Checker</h1>
+          <p class="lead">
+            Scan a public domain for HTTPS, TLS, browser security headers, mixed content,
+            technology exposure, and blacklist status.
+          </p>
+        </div>
+        <form id="scan-form" class="scan-form">
+          <label for="domain">Domain or URL</label>
+          <div class="input-row">
+            <input
+              id="domain"
+              name="domain"
+              type="text"
+              placeholder="example.com or https://example.com/page"
+              required
+            />
+            <button id="scan-button" type="submit">Scan</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="status" class="status" hidden></section>
+
+      <section id="results" class="results" hidden>
+        <div class="score-panel">
+          <div>
+            <p class="eyebrow">Risk score</p>
+            <h2 id="risk-title"></h2>
+          </div>
+          <button id="pdf-button" type="button">Generate PDF</button>
+        </div>
+
+        <section class="explanation">
+          <h2>AI explanation</h2>
+          <div id="ai-explanation"></div>
+        </section>
+
+        <section>
+          <h2>Checks</h2>
+          <div id="findings" class="finding-grid"></div>
+        </section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
